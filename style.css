@@ -2,4 +2,175 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+}
+
+.app-container {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+}
+
+.background {
+    height: 100vh;
+    width: 50vw;
+    border: 10px solid white;
+}
+
+.background:first-child {
+    background-color: #f05e45;
+    border-right: 5px solid white;
+}
+
+#bg2 {
+    border-left: 5px solid white;
+    background-color: #fdba11;
+}
+
+.scoreboard-container {
+    border: 10px solid white;
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+}
+
+.scoreboard {
+    background-color: #11497a;
+    padding-block: 0.75rem;
+}
+
+.title {
+    width: 100%;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 3rem;
+    padding-inline: 1.25rem;
+}
+
+.title>span:first-child {
+    color: #f05e45;
+}
+
+.title>span:last-child {
+    color: #fdba11;
+}
+
+.subtitle {
+    border-top: 4px solid white;
+    border-bottom: 4px solid white;
+    width: 100%;
+    text-transform: capitalize;
+    font-weight: 600;
+    font-size: 1.25rem;
+    padding: 0.5rem 1.25rem;
+}
+
+.game-info {
+    padding: 1rem 1.75rem;
+}
+
+.scores {
+    font-weight: 700;
+    font-size: 3rem;
+}
+
+.options {
+    font-weight: 700;
+    text-transform: capitalize;
+}
+
+#max-score {
+    margin-left: 1ch;
+    padding: 0.5ch 0.75ch;
+    outline: 0;
+    color: #11497a;
+    border-radius: 25px;
+}
+
+#max-score>option {
+    color: #11497a;
+}
+
+.button-container {
+    margin-inline: auto;
+    gap: 0.75rem;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+}
+
+.game-button {
+    padding-block: .25rem;
+    font-size: 1.25rem;
+    border-radius: 25px;
+    border: none;
+    cursor: pointer;
+}
+
+.game-button:first-child {
+    background-color: #f05e45;
+}
+
+.game-button:nth-child(2) {
+    background-color: #fdba11;
+}
+
+.game-button:last-child {
+    background-color: #60a12b;
+}
+
+.winners-screen {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.75);
+}
+
+.popup-container {
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+}
+
+.popup {
+    border: 5px solid white;
+    background-color: #11497a;
+    width: 100%;
+}
+
+.popup>* {
+    text-align: center;
+}
+
+.final-scores {
+    font-size: 3rem;
+    padding-top: 1rem;
+}
+
+.winner-name {
+    padding-bottom: 1rem;
+}
+
+.retry {
+    margin-inline: auto;
+    background-color: #60a12b;
+    padding-block: .3rem;
+    font-size: 1.3rem;
+    width: 100%;
+    border: none;
+    cursor: pointer;
+    text-transform: capitalize;
+}
+
+.visible {
+    display: block;
 }

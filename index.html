@@ -5,12 +5,67 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Connect Font Styles -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Connect Style Sheet -->
     <link rel="stylesheet" href="style.css">
+    <!-- Connect Javascript File -->
     <script src="app.js" defer></script>
     <title>Ping Pong Score Tracker</title>
 </head>
 
 <body>
+    <div class="app-container">
+        <section class="background"></section>
+        <section class="background" id="bg2"></section>
+        <section class="scoreboard-container">
+            <main class="scoreboard">
+                <h1 class="title"><span>pong</span><span>pong</span></h1>
+                <h2 class="subtitle">ping pong score keeper</h2>
+                <article class="game-info">
+                    <h3 class="scores">
+                        <span class="player-score" data-team="1">0</span> to <span class="player-score"
+                            data-team="2">0</span>
+                    </h3>
+                    <span class="instructions">Use the buttons below to control the score</span><br><br>
+                    <p class="options">
+                        playing to
+                        <select id="max-score">
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                        </select>
+                    </p>
+                </article>
+                <div class="button-container">
+                    <button class="game-button" type="button" data-add-score="1">
+                        +1 Player One
+                    </button>
+                    <button class="game-button" type="button" data-add-score="2">
+                        +1 Player Two
+                    </button>
+                    <button class="game-button" type="button" data-add-score="0">
+                        Reset Scores
+                    </button>
+                </div>
+            </main>
+        </section>
+        <section class="winners-screen">
+            <article class="popup-container">
+                <main class="popup">
+                    <h1 class="final-scores"><span class="final-score" data-player="1">0</span>-<span
+                            class="final-score" data-player="2">0</span></h1>
+                    <h2 class="winner-name">player - wins!</h2>
+                    <button type="button" class="retry">play again</button>
+                </main>
+            </article>
+        </section>
+    </div>
 
 </body>
 
